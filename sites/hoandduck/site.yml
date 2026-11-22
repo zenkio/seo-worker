@@ -1,0 +1,24 @@
+site:
+  name: "Ho & Duck"
+  url: https://hoandduck.zenkio.uk/
+  target_market: United Kingdom
+  country_code: GB
+  language: en-GB
+  search_engine: google.co.uk
+  hreflang: en-GB
+crawl:
+  max_pages: 50
+  delay_seconds: 1.0
+  timeout_seconds: 20
+  respect_robots: true
+  user_agent: "HoandduckSEOAudit/1.0 (polite site audit)"
+  database: .seo-worker/hoandduck.sqlite3
+schedule:
+  interval_seconds: 86400
+programmatic_templates:
+  - name: core Life in the UK landing pages
+    path_pattern: "^/(?:practice-test|life-in-the-uk-practice-test|life-in-the-uk-mock-test|free-life-in-the-uk-test)/?$"
+  - name: handbook chapter guides
+    path_pattern: "^/life-in-the-uk-test-chapters(?:/.*)?$"
+  - name: sample questions
+    path_pattern: "^/questions/?$"

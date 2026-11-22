@@ -1,0 +1,16 @@
+site:
+  name: Books to Scrape demo
+  url: https://books.toscrape.com/
+crawl:
+  max_pages: 12
+  delay_seconds: 1.0
+  timeout_seconds: 15
+  respect_robots: true
+  database: .seo-worker/state.sqlite3
+schedule:
+  interval_seconds: 86400
+programmatic_templates:
+  - name: product detail
+    path_pattern: "/catalogue/.+/.+"
+  - name: category listing
+    path_pattern: "/catalogue/category/"
